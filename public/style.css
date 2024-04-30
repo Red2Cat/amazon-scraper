@@ -1,0 +1,134 @@
+/* General styles for the body, setting up the font, background color, and default text color */
+body {
+    font-family: 'Arial', sans-serif; /* Clean, simple font for readability */
+    background-color: #f4f4f4; /* Light grey background for a subtle, professional look */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding to avoid content sticking to the edges */
+    color: #333; /* Dark grey text color for contrast and readability */
+}
+
+/* Container for centering the content and adding basic styling */
+.container {
+    max-width: 800px; /* Max width to ensure content is not too stretched on wider screens */
+    margin: auto; /* Center the container horizontally */
+    background: #fff; /* White background for the content area to stand out against the grey body background */
+    padding: 20px; /* Padding to create space inside the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect to make the container pop out */
+}
+
+/* Styling for the header containing the page title */
+header {
+    background-color: #0077B6; /* Blue background for the header to distinguish it from the content */
+    color: #fff; /* White text for contrast against the blue background */
+    padding: 10px 0; /* Padding above and below the text */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin to control spacing explicitly */
+}
+
+/* Styling for the search form */
+.search-form {
+    display: flex; /* Use flexbox for flexible layout of the input and button */
+    justify-content: center; /* Center the items horizontally */
+    margin-bottom: 20px; /* Space below the form */
+}
+
+.search-form input[type="text"] {
+    padding: 10px; /* Padding inside the input field for aesthetics */
+    font-size: 16px; /* Font size for readability */
+    border: 1px solid #ddd; /* Subtle border for the input */
+    flex: 1; /* Allow the input to grow and fill the space */
+}
+
+.search-form button {
+    padding: 10px 20px; /* Padding inside the button for a better click area */
+    background-color: #00B4D8; /* Bright blue background for the button to stand out */
+    color: white; /* White text for contrast */
+    border: none; /* No border for a cleaner look */
+    cursor: pointer; /* Pointer cursor on hover to indicate interactivity */
+    margin-left: 10px; /* Space between the input field and the button */
+}
+
+.search-form button:hover {
+    background-color: #0096C7; /* Darker blue on hover for a visual feedback */
+}
+
+/* List style for product display */
+.product-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin to control spacing explicitly */
+}
+
+.product-item {
+    border-bottom: 1px solid #eee; /* Separator between items */
+    padding: 20px; /* Padding around each item */
+    text-align: center; /* Center-align the content */
+}
+
+.product-title {
+    font-size: 18px; /* Larger font size for the title */
+    color: #000000; /* Black color for visual consistency with the header */
+    margin: 0 0 10px 0; /* Space below the title */
+}
+
+.product-image-container {
+    margin: 10px 0; /* Space above and below the image container */
+}
+
+.product-image {
+    max-width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for a softer look */
+}
+
+.product-details {
+    margin-top: 10px; /* Space between image and details below */
+}
+
+.product-rating {
+    display: block; /* Block display to occupy its own line */
+    color: #00B4D8; /* Same blue as the button for consistency */
+    font-size: 14px; /* Smaller font size for metadata */
+    margin: 5px 0; /* Space between rating and the next line */
+}
+
+.product-reviews {
+    display: block; /* Block display for separate line */
+    color: #333; /* Same dark grey as body text */
+    font-size: 14px; /* Same font size as rating for consistency */
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;  /* Fixed positioning ensures the overlay is always visible across the entire screen */
+    top: 0;           /* Start at the top edge of the viewport */
+    left: 0;          /* Start at the left edge of the viewport */
+    right: 0;         /* Stretch to the right edge of the viewport */
+    bottom: 0;        /* Stretch to the bottom edge of the viewport */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background, provides dimming effect */
+    display: flex;    /* Flexbox layout to easily center the spinner horizontally and vertically */
+    justify-content: center; /* Center horizontally in the flex container */
+    align-items: center;     /* Center vertically in the flex container */
+    z-index: 1000;    /* High z-index to ensure the overlay is on top of other page content */
+    display: none;    /* Initially hidden, shown when active */
+}
+
+/* Spinner styles */
+.spinner {
+    border: 8px solid #f3f3f3; /* Light grey border for all but the top edge */
+    border-top: 8px solid #3498db; /* Blue border for the top edge */
+    border-radius: 50%; /* Circular border radius to create a round shape */
+    width: 50px;        /* Fixed width of the spinner */
+    height: 50px;       /* Fixed height of the spinner */
+    animation: spin 2s linear infinite; /* Animation to rotate the spinner */
+}
+
+/* Keyframes for spinner rotation animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Start with 0 degree rotation */
+    100% { transform: rotate(360deg); } /* End with 360 degree rotation, creates a spinning effect */
+}
